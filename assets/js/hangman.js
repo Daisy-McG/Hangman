@@ -127,3 +127,13 @@ function updateWrongLettersEl() {
         $('#final-msg-container').css("display", "block");
     }
 }
+
+/* Change display settings on letter-error to display block, then changes it back to none after 2000ms to temporarily display notifcation 
+to user. This alerts the user that they have already used this letter. */
+function showNotification() {
+    $('#letter-error').css("display", "block");
+    setTimeout(() => {
+        $('#letter-error').css("display", "none");
+    }, 2000);
+}
+
