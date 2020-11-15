@@ -182,3 +182,22 @@ function validateLetter(input) {
     }
 }
 
+// Event listener on Play Again button to empty arrays and clear game board before starting a new game
+playAgainBtn.addEventListener('click', () => {
+    //Empty the arrays
+    correctLetters.splice(0);
+    wrongLetters.splice(0);
+
+    // Start a mew game
+    startGame();
+
+    // Hide wrong letters and figures
+    updateWrongLettersEl();
+
+    // Hide final message
+    $('#final-msg-container').css("display", "none");
+
+    //Hide faces when starting new game
+    $('.start-face').css("display", "none");
+    $('.lose-face').css("display", "none");
+});
