@@ -48,7 +48,7 @@ p {
 }
 
 .figure-part {
-    display: none;
+    display: block;
 }
 
 .start-face {
