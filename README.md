@@ -55,8 +55,22 @@ Site Goals:
 * As a user, I want to see my score so that I know how many games I have won or lost.
 
 ### **The Scope Plane**
+Features planned:
+* Page Heading - A page heading that has a clear caption what the page is about.
+* An interactive Hangman Game.
+* Game Instructions - Clear instructions on how to play the game.
+* An SVG drawing of Hangman.
+* Start Button.
+* Correct Guesses displayed.
+* Score Count.
+* Wrong Letters displayed.
+* Restart Game button.
+* Error messages with incorrect guesses.
+* Win / Lose information.
+* Footer Items - Contact Information and link GitHub Profile / Repo.
 
-
+**Feature Scale** <br>
+![Features](assets/images/scope.jpg)
 ### **The Structure Plane**
 
 
@@ -91,7 +105,20 @@ Site Goals:
 ## Deployment
 
 ### Project Creation
+To create this project I initialised the repository by typing the following command into the bash terminal in Visual studio code:
+* git init
 
+For the initial commit I clicked on the Source Control menu on the side bar in Visual Studio code. Added the change to the staging area by clicking the '+' icon next to the file name. I then added a commit message in the text box below source control. Lastly I clicked on the Public to GitHub icon in the bottom left hand side of Visual Studio Code and I was then prompted with the following two options:
+    
+    * Publish to GitHub private repository
+    * Public to GitHub public repository
+
+I selected publish to GitHub public repository and my first commit was published.
+
+The following commands were used for version control throughout the project:
+* git add filename - This command was used to add fils to the staging area before commiting.
+* git commit -m "commit message explaining the updates" - This command was used to to commit changes to the local repository.
+* git push - This command is used to push all commited changes to the GitHub repository.
 
 ### Using Github Pages
 
