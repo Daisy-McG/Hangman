@@ -75,7 +75,7 @@ function displayWord() {
     if (innerWord === selectedWord) {
         //set game finish to true to stop keydown events
         gameFinish = true;
-        $('#final-message').html("Congratulations! You Won!!!")
+        $('#final-message').html("Congratulations! You Won!!!");
         $('#final-msg-container').css("display", "block");
     }
 
