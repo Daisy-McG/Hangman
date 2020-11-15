@@ -152,16 +152,23 @@ A score section will be added to the page to show the user how many games they h
 
 ### **The Skeleton Plane**
 #### Wireframes
-
+Mobile and Desktop view
+![Wireframes](assets/images/wireframe.JPG)
 
 ### **The Surface Plane**
 ### Design
 
 #### Colour Scheme
+Body colour: A Dark Grey![#373638](https://placehold.it/15/373638/000000?text=+)<br>
+Text colour: White ![#FFFFFF](https://placehold.it/15/FFFFFF/000000?text=+)<br> 
+Game Board background colour: A light grey ![#868686](https://placehold.it/15/868686/000000?text=+)<br>
+Header and Footer background: A shade of light red ![#9E5656](https://placehold.it/15/9E5656/000000?text=+)<br>
 
 #### Typography
+The headers on all pages throughout the Website are using the [Playfair Display SC](https://fonts.google.com/specimen/Playfair+Display+SC) font while the main text is using the [Rokkitt](https://fonts.google.com/specimen/Rokkitt) font.
 
 #### Imagery
+No physical images will be used on the site. A Hangman image will be drawn with code by using Scalable Vector Graphics (SVG) to display this on the HTML page.
 
 #### Differences to Design
 ****
