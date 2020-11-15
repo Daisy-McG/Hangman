@@ -44,3 +44,36 @@ function startGame() {
 
     displayWord();
 }
+
+// Function to display the word
+function displayWord() {
+    //set game finish to false to allow input for new game
+    gameFinish = false;
+
+    // Display hint
+    $('#hint').html(`<p>Hint: ${selectedHint}</p>`);
+
+    // Display word
+    $('#word').html(`
+        ${selectedWord
+            .split('')
+            .map(letter => `
+                <span class="letter">
+                    ${correctLetters.includes(letter)  ? letter :  ''}
+                </span>
+            `).join('')}
+        `);
+
+    const innerWord = wordEl.innerText.replace(/\n/g, '');
+
+    /* If the inner word matches the selected word, insert text to final-message saying "Congratulations! You Won!!!" 
+    Popup will then display with final-message and a button so user can start again. */
+
+    if (innerWord === selectedWord) {
+        //set game finish to true to stop keydown events
+        gameFinish = true;
+        $('#final-message').html("Congratulations! You Won!!!")
+        $('#final-msg-container').css("display", "block");
+    }
+
+}
