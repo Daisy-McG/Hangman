@@ -7,7 +7,11 @@ const playAgainBtn = document.getElementById('play-button');
 // Variable to determine if game has ended or not, to be used to control keydown events
 let gameFinish = true;
 
-//  Variables for Selected word and hint
+// Variables for keeping score
+let win = 0;
+let lose = 0;
+
+// Variable for Selected word and hint
 let selectedHint;
 let selectedWord;
 
@@ -73,10 +77,15 @@ function displayWord() {
     Popup will then display with final-message and a button so user can start again. */
 
     if (innerWord === selectedWord) {
-        //set game finish to true to stop keydown events
+        //set game finish to true to stop input guesses
         gameFinish = true;
+
+        // Display final win status
         $('#final-message').html("Congratulations! You Won!!!");
         $('#final-msg-container').css("display", "block");
+
+        win = win + 1;
+        $('.win').html(win);
     }
 
 }
@@ -116,7 +125,10 @@ function updateWrongLettersEl() {
         $('.start-face').css("display", "none");
         $('.lose-face').css("display", "block");
 
+        // Display final win status
         $('#final-message').html("Sorry, you Lose!!!");
+        $('#final-msg-container').css("display", "block");
+
         //After they lose, display the selectedWord
         wordEl.innerHTML = `
         ${selectedWord
@@ -127,8 +139,9 @@ function updateWrongLettersEl() {
                 </span>
             `).join('')}
         `;
-
-        $('#final-msg-container').css("display", "block");
+        // Insert losing score to HTML
+        lose = lose + 1;
+        $('.lose').html(lose);
     }
 }
 
