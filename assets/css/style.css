@@ -23,6 +23,10 @@ h6 {
     margin-bottom: 1.5rem;
 }
 
+p {
+    font-size: 1.5rem;
+}
+
 /* Game */
 
 .game-container {
