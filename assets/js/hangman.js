@@ -49,6 +49,9 @@ function startGame() {
     // Hide start button on game start
     $('#start-btn').css('display', 'none');
 
+    // Display user input on game start
+    $('#userInput').css('display', 'block');
+
     displayWord();
 }
 
