@@ -11,6 +11,10 @@ let gameFinish = false;
 let selectedHint;
 let selectedWord;
 
+// Declare empty arrays to store correct and wrong letters
+const correctLetters = [];
+const wrongLetters = [];
+
 // Get all elements with a class of figure-part and store to array
 const figureParts = document.querySelectorAll('.figure-part');
 
