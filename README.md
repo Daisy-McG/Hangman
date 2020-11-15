@@ -1,5 +1,5 @@
 # JavaScript Hangman Game
-The live website can be found [here]()
+The live website can be found [here](https://daisy-mcg.github.io/milestone-project-two/)
 
 ## Purpose
 
@@ -234,7 +234,7 @@ The following commands were used for version control throughout the project:
 * git push - This command is used to push all commited changes to the GitHub repository.
 
 ### Using Github Pages
-1. Navigate to the GitHub [Repository:]()
+1. Navigate to the GitHub [Repository:](https://github.com/Daisy-McG/milestone-project-two)
 1. Click the 'Settings' Tab.
 1. Scroll Down to the Git Hub Pages Heading.
 1. Select 'Master Branch' as the source.
@@ -242,7 +242,7 @@ The following commands were used for version control throughout the project:
 1. Click on the link to go to the live deployed page.
 
 ### Run Locally
-1. Navigate to the GitHub [Repository:]()
+1. Navigate to the GitHub [Repository:](https://daisy-mcg.github.io/milestone-project-two/)
 1. Click the Code drop down menu.
 1. Either Download the ZIP file, unpackage locally and open with IDE (This route ends here) OR Copy Git URL from the HTTPS dialogue box.
 1. Open your developement editor of choice and open a terminal window in a directory of your choice.
