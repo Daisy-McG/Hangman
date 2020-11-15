@@ -49,7 +49,7 @@ Site Goals:
 #### User stories
 * As a user, I want to easily understand the main purpose of the site.
 * As a user, I want to view the website and content clearly on any device.
-* As a user, I want to be able to play a game that contains instructions so that I understand how to play.
+* As a user, I want to have instructions on how to play the game so that I can easily understand the rules.
 * As a user, I want to be able to start a game when I am ready.
 * As a user, I want to know whether my guess was successful or not.
 * As a user, I want a way to start a new game when the current game has ended.
@@ -95,7 +95,7 @@ Description:<br>
 Bootstrap will be used to lay the content of the Website out in containers, rows and columns. Mobile first design will be used when coding the project and testing will be required to ensure the layout is clear on all devices. No elements should overlap their containers and all items should be responsive so that no elements are too large to display properly.
 
 User Story:
-> As a user, I want to be able to play a game that contains instructions so that I understand how to play.
+> As a user, I want to have instructions on how to play the game so that I can easily understand the rules.
  
  Acceptance Criteria:
  * Game Instructions are provided that contain the following information:
