@@ -138,6 +138,10 @@ p {
     border-radius: 5px;
 }
 
+#score span {
+    font-size: 2rem;
+}
+
 /* Header */
 header {
     background-color: #9E5656;
