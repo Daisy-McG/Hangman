@@ -77,3 +77,54 @@ function displayWord() {
     }
 
 }
+
+// Update the wrong letters
+function updateWrongLettersEl() {
+
+    // Display wrong letters into html
+    wrongLettersEl.innerHTML = `
+        ${wrongLetters.length > 0 ? '<p>Wrong Letters</p>' : ''}
+        ${wrongLetters.map(letter => `<span>${letter}</span>`)}
+    `;
+    /* Loops through figureParts array for each element with an id of figure-part and displays one 'body part'
+    each time an inccorect letter is guessed */
+    figureParts.forEach((part, index) => {
+        const errors = wrongLetters.length;
+
+        if (index < errors) {
+            part.style.display = 'block';
+            // Display face only when head has been displayed
+            if (index >= 4) {
+                $('.start-face').css("display", "block");
+            }
+
+        } else {
+            part.style.display = 'none';
+        }
+    });
+
+    /* Checks if wrongLetters array is equal to figureParts array. 
+    If it is equal, it displays 'Sorry you lose!' into the h2 element with an id of final-message */
+    if (wrongLetters.length === figureParts.length) {
+        //set game finish to true to stop keydown events
+        gameFinish = true;
+
+        //Switch to lose face by hiding start face and displaying lose face
+        $('.start-face').css("display", "none");
+        $('.lose-face').css("display", "block");
+
+        $('#final-message').html("Sorry, you Lose!!!");
+        //After they lose, display the selectedWord
+        wordEl.innerHTML = `
+        ${selectedWord
+            .split('')
+            .map(selectedWord => `
+                <span class="letter">
+                    ${selectedWord}
+                </span>
+            `).join('')}
+        `;
+
+        $('#final-msg-container').css("display", "block");
+    }
+}
