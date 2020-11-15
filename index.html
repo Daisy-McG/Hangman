@@ -49,10 +49,11 @@
                 <!-- Hint -->
                 <div id="hint">
                 </div>
-
+                
+            <!-- Calls validateForm() method to send user input to variable -->
                 <form name="userInput" id="userInput" onsubmit="return false">
                     <input type="text" maxlength="1" name="guess" placeholder="Enter guess here" />
-                    <button onclick="">Submit</button>
+                    <button onclick="validateForm()">Submit</button>
                 </form>
 
                 <!-- Error message when using duplicate letters -->
