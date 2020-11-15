@@ -39,8 +39,7 @@ function startGame() {
     selectedWord = words[index].toUpperCase();
     selectedHint = hints[index].toUpperCase();
 
-    // Hide Hangman at game start
-    part.style.display = 'none';
+    $('.figure-part').css('display', 'none');
 
     displayWord();
 }
