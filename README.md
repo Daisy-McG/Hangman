@@ -106,7 +106,7 @@ User Story:
 Description:<br>
 Information to be included:
 A full set of game instructions will be added to the game board. This will display to the user, information on how to input guesses, what inputs are accepted, how to win or lose the game.<br>
-Inccorect letter guesses will be shown under 'Wrong Letters' on the game board to that the user can see what letters have already been used.<br>
+Incorrect letter guesses will be shown under 'Wrong Letters' on the game board to that the user can see what letters have already been used.<br>
 If you lose the game, the correct word will be revealed to ensure the user is able to see what the answer was.<br>
 Only letters in the English alphabet will accepted as the words will be written in English.<br>
 You may only enter a letter once as words with duplicate letters will be counted as one guess.<br>
