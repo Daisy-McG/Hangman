@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap Imports -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+    <!-- Link to external style sheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <title>JavaScript Hangman Game</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-12 text-center">
+                    <h1 class="page-heading">Hangman</h1>
+                    <h3 class="sub-heading">Can you guess the word?</h3>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container game-container">
+        <div class="row no-gutters">
+            <div class="col-sm-12 col-md-4">
+                <!-- Hangman game instructions -->
+                <h2>How To Play</h2>
+                <p>Guess the hidden word by inputting letters to text box.<br>
+                    If you enter a correct letter, it will be displayed on the game board.<br>
+                    Inccorect letter guesses will be shown under 'Wrong Letters' on the game board.<br>
+                    If you guess an incorrect letter 10 times, you will lose the game.<br>
+                    If you lose the game, the correct word will be revealed.<br>
+                    Only letters in the English alphabet will accepted.<br>
+                    You may only enter a letter once and they are case insensitive.<br>
+                </p>
+                <button onclick="startGame()">Start Game</button>
+            </div>
+            <!-- Word and text input for guesses -->
+            <div class="col-sm-12 col-md-4 text-center">
+                <div class="word" id="word">
+                </div>
+
+                <!-- Hint -->
+                <div id="hint">
+                </div>
+                
+            <!-- Calls validateForm() method to send user input to variable -->
+                <form name="userInput" id="userInput" onsubmit="return false">
+                    <input type="text" maxlength="1" name="guess" placeholder="Enter guess here" />
+                    <button onclick="validateForm()">Submit</button>
+                </form>
+
+                <!-- Error message when using duplicate letters -->
+                <p id="letter-error">You have already entered this letter!</p>
+
+                <!-- Display incorrect letter guesses -->
+                <div id="wrong-letters" class="text-center">
+                </div>
+            </div>
+            <!-- Start Hangman game -->
+            <div class="col-sm-12 col-md-4 text-center">
+                <svg height="450" width="200" class="figure-container">
+                    <!-- Rod -->
+                    <line x1="20" y1="330" x2="230" y2="330" class="figure-part" />
+                    <line x1="60" y1="20" x2="60" y2="330" class="figure-part" />
+                    <line x1="60" y1="20" x2="240" y2="20" class="figure-part" />
+                    <line x1="140" y1="20" x2="140" y2="50" class="figure-part" />
+
+                    <!-- Head -->
+                    <circle cx="140" cy="80" r="30" class="figure-part" />
+
+                    <!-- Start Face -->
+                    <circle cx="130" cy="70" r="3" class="start-face" />
+                    <circle cx="150" cy="70" r="3" class="start-face" />
+                    <circle cx="140" cy="90" r="5" class="start-face" />
+
+                    <!-- Lose Face -->
+                    <line x1="135" y1="80" x2="125" y2="70" class="lose-face" />
+                    <line x1="125" y1="80" x2="135" y2="70" class="lose-face" />
+
+                    <line x1="155" y1="80" x2="145" y2="70" class="lose-face" />
+                    <line x1="145" y1="80" x2="155" y2="70" class="lose-face" />
+
+
+                    <circle cx="140" cy="90" r="5" class="lose-face" />
+
+
+                    <!-- Body -->
+                    <line x1="140" y1="110" x2="140" y2="200" class="figure-part" />
+
+                    <!-- Arms -->
+                    <line x1="140" y1="140" x2="100" y2="110" class="figure-part" />
+                    <line x1="140" y1="140" x2="180" y2="110" class="figure-part" />
+
+                    <!-- Legs -->
+                    <line x1="140" y1="200" x2="110" y2="250" class="figure-part" />
+                    <line x1="140" y1="200" x2="170" y2="250" class="figure-part" />
+                </svg>
+                <span class="sr-only">SVG Board with hangman image</span>
+            </div>
+        </div>
+        <!-- Container for final messages -->
+        <div class="final-msg-container" id="final-msg-container">
+            <div class="row no-gutters">
+                <div class="col-12 d-flex justify-content-center">
+                    <h2 id="final-message"></h2>
+                    <button id="play-button" onclick="startGame()">
+                        Play Again
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Hangman game -->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row no-gutters">
+                <!-- Contact Information -->
+                <div class="col-sm-12 col-md-6 text-center">
+                    <p>
+                        Contact: Daisy McGirr<br>
+                        Email: <a href="mailto: daisy.ej.mcg@gmail.com">daisy.ej.mcg@gmail.com</a><br>
+                    </p>
+                </div>
+                <!-- GitHub Repo Information -->
+                <div class="col-sm-12 col-md-6 text-center">
+                    <p>GitHub Repository - User: Daisy-McG </p>
+                    <a target="_blank" href="https://github.com/Daisy-McG">
+                        <i class="fab fa-github"></i>
+                        <span class="sr-only">Link to GitHub repository</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery Import -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+        integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+        crossorigin="anonymous"></script>
+    <!-- Link to external JavaSvript File -->
+    <script src="assets/js/hangman.js"></script>
+</body>
+
+</html>
