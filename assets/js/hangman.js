@@ -31,3 +31,16 @@ const hints = ['Animal', 'Animal', 'Animal', 'Animal', 'Animal', 'Animal', 'Fast
     'Musical Instrument', 'Musical Instrument', 'Musical Instrument', 'Game', 'Game', 'Emotion', 'Emotion', 'Colour', 'Colour', 'Precious Gem',
     'Precious Gem', 'Precious Gem', 'Precious Gem',
 ];
+
+/* Function to start the game.
+    Picks a random number from the words array and use index to assign selectedWord and selectedHint */
+function startGame() {
+    let index = words.indexOf(words[Math.floor(Math.random() * words.length)])
+    selectedWord = words[index].toUpperCase();
+    selectedHint = hints[index].toUpperCase();
+
+    // Hide Hangman at game start
+    part.style.display = 'none';
+
+    displayWord();
+}
