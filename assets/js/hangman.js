@@ -5,7 +5,7 @@ const wrongLettersEl = document.getElementById('wrong-letters');
 const playAgainBtn = document.getElementById('play-button');
 
 // Variable to determine if game has ended or not, to be used to control keydown events
-let gameFinish = false;
+let gameFinish = true;
 
 //  Variables for Selected word and hint
 let selectedHint;
@@ -35,7 +35,7 @@ const hints = ['Animal', 'Animal', 'Animal', 'Animal', 'Animal', 'Animal', 'Fast
 /* Function to start the game.
     Picks a random number from the words array and use index to assign selectedWord and selectedHint */
 function startGame() {
-    let index = words.indexOf(words[Math.floor(Math.random() * words.length)])
+    let index = words.indexOf(words[Math.floor(Math.random() * words.length)]);
     selectedWord = words[index].toUpperCase();
     selectedHint = hints[index].toUpperCase();
 
