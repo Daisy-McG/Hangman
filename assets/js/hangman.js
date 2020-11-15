@@ -42,6 +42,9 @@ function startGame() {
     // Hide hangman figure on game start
     $('.figure-part').css('display', 'none');
 
+    // Hide start button on game start
+    $('#start-btn').css('display', 'none');
+
     displayWord();
 }
 
