@@ -59,6 +59,63 @@ p {
     display: none;
 }
 
+.word {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+}
+
+#wrong-letters p {
+    margin-top: 2rem;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+#wrong-letters span {
+    font-size: 3rem;
+}
+
+.letter {
+    border-bottom: 3px solid #000000;
+    font-size: 4rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3px;
+    height: 50px;
+    width: 30px;
+    color: #9E5656;
+}
+
+.final-msg-container {
+    display: none;
+}
+
+#final-message {
+    margin-top: 0.5rem;
+}
+
+#letter-error {
+    display: none;
+    color: #d80404;
+    font-weight: bolder;
+    padding: 5px;
+}
+
+#hint p {
+    margin-top: 5rem;
+    font-size: 1.5rem;
+}
+
+#play-button {
+    background-color: #ffffff;
+    border-radius: 3px;
+    margin-left: 5px;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
 
 /* Header */
 header {
