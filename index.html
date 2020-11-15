@@ -26,97 +26,99 @@
         </div>
     </header>
 
-    <div class="container game-container">
-        <div class="row no-gutters">
-            <div class="col-sm-12 col-md-4">
-                <!-- Hangman game instructions -->
-                <h2>How To Play</h2>
-                <p>Guess the hidden word by inputting letters to text box.<br>
-                    If you enter a correct letter, it will be displayed on the game board.<br>
-                    Inccorect letter guesses will be shown under 'Wrong Letters' on the game board.<br>
-                    If you guess an incorrect letter 10 times, you will lose the game.<br>
-                    If you lose the game, the correct word will be revealed.<br>
-                    Only letters in the English alphabet will accepted.<br>
-                    You may only enter a letter once and they are case insensitive.<br>
-                </p>
-                <button id="start-btn" onclick="startGame()">Start Game</button>
-            </div>
-            <!-- Word and text input for guesses -->
-            <div class="col-sm-12 col-md-4 text-center">
-                <div class="word" id="word">
-                </div>
-
-                <!-- Hint -->
-                <div id="hint">
-                </div>
-                
-            <!-- Calls validateForm() method to send user input to variable -->
-                <form name="userInput" id="userInput" onsubmit="return false">
-                    <input type="text" maxlength="1" name="guess" placeholder="Enter guess here" />
-                    <button onclick="validateForm()">Submit</button>
-                </form>
-
-                <!-- Error message when using duplicate letters -->
-                <p id="letter-error">You have already entered this letter!</p>
-
-                <!-- Display incorrect letter guesses -->
-                <div id="wrong-letters" class="text-center">
-                </div>
-            </div>
-            <!-- Start Hangman game -->
-            <div class="col-sm-12 col-md-4 text-center">
-                <svg height="450" width="200" class="figure-container">
-                    <!-- Rod -->
-                    <line x1="20" y1="330" x2="230" y2="330" class="figure-part" />
-                    <line x1="60" y1="20" x2="60" y2="330" class="figure-part" />
-                    <line x1="60" y1="20" x2="240" y2="20" class="figure-part" />
-                    <line x1="140" y1="20" x2="140" y2="50" class="figure-part" />
-
-                    <!-- Head -->
-                    <circle cx="140" cy="80" r="30" class="figure-part" />
-
-                    <!-- Start Face -->
-                    <circle cx="130" cy="70" r="3" class="start-face" />
-                    <circle cx="150" cy="70" r="3" class="start-face" />
-                    <circle cx="140" cy="90" r="5" class="start-face" />
-
-                    <!-- Lose Face -->
-                    <line x1="135" y1="80" x2="125" y2="70" class="lose-face" />
-                    <line x1="125" y1="80" x2="135" y2="70" class="lose-face" />
-
-                    <line x1="155" y1="80" x2="145" y2="70" class="lose-face" />
-                    <line x1="145" y1="80" x2="155" y2="70" class="lose-face" />
-
-
-                    <circle cx="140" cy="90" r="5" class="lose-face" />
-
-
-                    <!-- Body -->
-                    <line x1="140" y1="110" x2="140" y2="200" class="figure-part" />
-
-                    <!-- Arms -->
-                    <line x1="140" y1="140" x2="100" y2="110" class="figure-part" />
-                    <line x1="140" y1="140" x2="180" y2="110" class="figure-part" />
-
-                    <!-- Legs -->
-                    <line x1="140" y1="200" x2="110" y2="250" class="figure-part" />
-                    <line x1="140" y1="200" x2="170" y2="250" class="figure-part" />
-                </svg>
-                <span class="sr-only">SVG Board with hangman image</span>
-            </div>
-        </div>
-        <!-- Container for final messages -->
-        <div class="final-msg-container" id="final-msg-container">
+    <main>
+        <div class="container game-container">
             <div class="row no-gutters">
-                <div class="col-12 d-flex justify-content-center">
-                    <h2 id="final-message"></h2>
-                    <button id="play-button" onclick="startGame()">
-                        Play Again
-                    </button>
+                <div class="col-sm-12 col-md-4">
+                    <!-- Hangman game instructions -->
+                    <h2>How To Play</h2>
+                    <p>Guess the hidden word by inputting letters to text box.<br>
+                        If you enter a correct letter, it will be displayed on the game board.<br>
+                        Inccorect letter guesses will be shown under 'Wrong Letters' on the game board.<br>
+                        If you guess an incorrect letter 10 times, you will lose the game.<br>
+                        If you lose the game, the correct word will be revealed.<br>
+                        Only letters in the English alphabet will accepted.<br>
+                        You may only enter a letter once and they are case insensitive.<br>
+                    </p>
+                    <button id="start-btn" onclick="startGame()">Start Game</button>
+                </div>
+                <!-- Word and text input for guesses -->
+                <div class="col-sm-12 col-md-4 text-center">
+                    <div class="word" id="word">
+                    </div>
+
+                    <!-- Hint -->
+                    <div id="hint">
+                    </div>
+
+                    <!-- Calls validateForm() method to send user input to variable -->
+                    <form name="userInput" id="userInput" onsubmit="return false">
+                        <input type="text" maxlength="1" name="guess" placeholder="Enter guess here" />
+                        <button onclick="validateForm()">Submit</button>
+                    </form>
+
+                    <!-- Error message when using duplicate letters -->
+                    <p id="letter-error">You have already entered this letter!</p>
+
+                    <!-- Display incorrect letter guesses -->
+                    <div id="wrong-letters" class="text-center">
+                    </div>
+                </div>
+                <!-- Start Hangman game -->
+                <div class="col-sm-12 col-md-4 text-center">
+                    <svg height="450" width="200" class="figure-container">
+                        <!-- Rod -->
+                        <line x1="20" y1="330" x2="230" y2="330" class="figure-part" />
+                        <line x1="60" y1="20" x2="60" y2="330" class="figure-part" />
+                        <line x1="60" y1="20" x2="240" y2="20" class="figure-part" />
+                        <line x1="140" y1="20" x2="140" y2="50" class="figure-part" />
+
+                        <!-- Head -->
+                        <circle cx="140" cy="80" r="30" class="figure-part" />
+
+                        <!-- Start Face -->
+                        <circle cx="130" cy="70" r="3" class="start-face" />
+                        <circle cx="150" cy="70" r="3" class="start-face" />
+                        <circle cx="140" cy="90" r="5" class="start-face" />
+
+                        <!-- Lose Face -->
+                        <line x1="135" y1="80" x2="125" y2="70" class="lose-face" />
+                        <line x1="125" y1="80" x2="135" y2="70" class="lose-face" />
+
+                        <line x1="155" y1="80" x2="145" y2="70" class="lose-face" />
+                        <line x1="145" y1="80" x2="155" y2="70" class="lose-face" />
+
+
+                        <circle cx="140" cy="90" r="5" class="lose-face" />
+
+
+                        <!-- Body -->
+                        <line x1="140" y1="110" x2="140" y2="200" class="figure-part" />
+
+                        <!-- Arms -->
+                        <line x1="140" y1="140" x2="100" y2="110" class="figure-part" />
+                        <line x1="140" y1="140" x2="180" y2="110" class="figure-part" />
+
+                        <!-- Legs -->
+                        <line x1="140" y1="200" x2="110" y2="250" class="figure-part" />
+                        <line x1="140" y1="200" x2="170" y2="250" class="figure-part" />
+                    </svg>
+                    <span class="sr-only">SVG Board with hangman image</span>
+                </div>
+            </div>
+            <!-- Container for final messages -->
+            <div class="final-msg-container" id="final-msg-container">
+                <div class="row no-gutters">
+                    <div class="col-12 d-flex justify-content-center">
+                        <h2 id="final-message"></h2>
+                        <button id="play-button" onclick="startGame()">
+                            Play Again
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
     <!-- End Hangman game -->
 
     <footer id="footer">
