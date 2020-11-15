@@ -39,6 +39,7 @@ function startGame() {
     selectedWord = words[index].toUpperCase();
     selectedHint = hints[index].toUpperCase();
 
+    // Hide hangman figure on game start
     $('.figure-part').css('display', 'none');
 
     displayWord();
@@ -135,5 +136,49 @@ function showNotification() {
     setTimeout(() => {
         $('#letter-error').css("display", "none");
     }, 2000);
+}
+
+/* Function to get form input and call validateLetter() if value is not undefined */
+function validateForm() {
+    const input = document.forms["userInput"]["guess"].value;
+    if (input != undefined) {
+        validateLetter(input);
+    }
+
+    // Reset text in form
+    document.getElementById("userInput").reset();
+}
+
+// Validate Letter if game is active
+function validateLetter(input) {
+    if (gameFinish === false) {
+        const letter = input.toUpperCase();
+        // Regex to verify variable is a letter
+        if ((/[a-zA-Z]/).test(letter)) {
+            /* If letter is in selected word and correctLetters array doesnt already contain letter, 
+            push it to array and display the letter else show notification letter has already been used.*/
+            if (selectedWord.includes(letter)) {
+                if (!correctLetters.includes(letter)) {
+                    correctLetters.push(letter);
+
+                    displayWord();
+
+                } else {
+                    showNotification();
+                }
+                /* If Letter guess is wrong and has not already been used, add to wrongLetters array and call updateWrongLettersEl to display letter. 
+                    If it has already been used, showNotification() - Display to user that letter has already been used */
+            } else {
+
+                if (!wrongLetters.includes(letter)) {
+                    wrongLetters.push(letter);
+
+                    updateWrongLettersEl();
+                } else {
+                    showNotification();
+                }
+            }
+        }
+    }
 }
 
