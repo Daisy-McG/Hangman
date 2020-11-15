@@ -29,6 +29,15 @@
     <main>
         <div class="container game-container">
             <div class="row no-gutters">
+                <!-- Game scores -->
+                <div class="col-12 text-center" id="score">
+                    <p>GAME SCORE:  
+                        Win: <span class="win">0</span> 
+                        Lose: <span class="lose">0</span>
+                    </p>
+                </div>
+            </div>
+            <div class="row no-gutters">
                 <div class="col-sm-12 col-md-4">
                     <!-- Hangman game instructions -->
                     <h2>How To Play</h2>
@@ -40,7 +49,10 @@
                         Only letters in the English alphabet will accepted.<br>
                         You may only enter a letter once and they are case insensitive.<br>
                     </p>
-                    <button id="start-btn" onclick="startGame()">Start Game</button>
+                    <div class="text-center">
+                        <button id="start-btn" onclick="startGame()">Start Game</button>
+                    </div>
+                    
                 </div>
                 <!-- Word and text input for guesses -->
                 <div class="col-sm-12 col-md-4 text-center">
@@ -53,8 +65,8 @@
 
                     <!-- Calls validateForm() method to send user input to variable -->
                     <form name="userInput" id="userInput" onsubmit="return false">
-                        <input type="text" maxlength="1" name="guess" placeholder="Enter guess here" />
-                        <button onclick="validateForm()">Submit</button>
+                        <input type="text" maxlength="1" name="guess" id="guess" placeholder="Enter guess here" />
+                        <button onclick="validateForm()" id="submit-btn">Submit</button>
                     </form>
 
                     <!-- Error message when using duplicate letters -->
