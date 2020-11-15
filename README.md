@@ -24,6 +24,9 @@ This Website was created for the sole purpose of completing the second Milestone
     * [Future Features](#Features-Left-to-Implement)
 * [Technologies](#Technologies)
 * [Testing](#Testing)
+    * [Test Strategy](#Test-Strategy)
+    * [Test Results](#Test-Results)
+    * [Isses and Resolutions](#Issues-and-Resolutions-to-issues-found-during-testing)
 * [Deployment](#Deployment)
     * [Project Creation](#Project-Creation)
     * [GitHub Pages](#Using-Github-Pages)
@@ -51,6 +54,7 @@ Site Goals:
 * As a user, I want to view the website and content clearly on any device.
 * As a user, I want to have instructions on how to play the game so that I can easily understand the rules.
 * As a user, I want to be able to start a game when I am ready.
+* As a user, I want to see a hangman image appear as I guess incorrectly.
 * As a user, I want to know whether my guess was successful or not.
 * As a user, I want a way to start a new game when the current game has ended.
 * As a user, I want to see my score so that I know how many games I have won or lost.
@@ -122,6 +126,15 @@ Description:<br>
 A button will be added to the game board to allow the user to start a game.
 
 User Story:
+> As a user, I want to see a hangman image appear as I guess incorrectly.
+ 
+ Acceptance Criteria:
+ * Hangman image is displayed one piece at a time after each unsuccessfull guess.
+
+Description:<br>
+A Hangman image will be drawn using Scalable Vector Grapics. Each part of the image will be it's own element so it can be displayed a single piece at a time. Once all body parts are displayed, the game will end and the user will lose.
+
+User Story:
 > As a user, I want to know whether my guess was successful or not.
  
  Acceptance Criteria:
@@ -148,7 +161,7 @@ User Story:
  * User Win / Lose scores are displayed on Screen
 
 Description:<br>
-A score section will be added to the page to show the user how many games they have won or lost during their session. This score will only be displayed for the current session. Once the browser is closed, the score will not be available next time the user goes to the site.
+A score section will be added to the page to show the user how many games they have won or lost during their session. This score will only be displayed for the current session. Once the browser is refreshed, the score will reset.
 
 ### **The Skeleton Plane**
 #### Wireframes
@@ -185,6 +198,8 @@ No physical images will be used on the site. A Hangman image will be drawn with 
 	* This project uses custom written CSS to style the Website.
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 	* This project uses JavaScript for functionality through the Website, this includes the puzzle game, onclick button functions, use of the Email API and Google Maps APIs.
+* [jQuery](https://jquery.com/)
+    * jQuery was used throughout the hangman.js file to minipulate css and html properties.
 * [Bootstrap](https://getbootstrap.com/)
 	* The Bootstrap framework is used throughout this website for layouts and styling. 
 * [Google Fonts](https://fonts.google.com/)
@@ -207,11 +222,46 @@ No physical images will be used on the site. A Hangman image will be drawn with 
     * tecnisih.com Multi Device Website Mockup Generator was used to create the Mock up image in this README.
 * [placehold.it](https://placehold.it)
     * placehold.it was used to display the colours shown in the Color Scheme section.
+* [Excel](https://www.microsoft.com/en-ie/microsoft-365/excel)
+    * Excel was used to create the bar chart diplaying difficulty / importance information.
 
 ****
 ## Testing
 
-**Bugs found and fixed during testing:**
+### Test Strategy
+#### **Summary**
+
+Testing is required on The Hangman JavaScript game created for Milestone Project 2. All features and user stories documented in the README are to be tested. 
+
+HTML code must pass through the [W3C HTML Validator](https://validator.w3.org/).
+
+CSS code must pass through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
+
+JavaScript code must pass through the [JSHint Validator](https://jshint.com/).
+
+#### **High Level Test Cases**
+![Test Cases](assets/images/test_cases.jpg)
+
+#### **Access Requirements**
+
+GitHub Respoitory must be set to public for the live website to be displayed.
+
+#### **Regression Testing**
+
+All features previously tested while in development should be retested on the live Website.
+
+#### **Assumptions and Dependencies**
+
+Testing is dependent on website being live on GitHub pages.
+
+#### **Out of Scope**
+
+### Test Results
+
+### Issues and Resolutions to issues found during testing
+* Email mailto link was broken due to a space between the mailto and email. This was found when running code through jshint.com and was fixed by removing the space.
+* Clicking the 'Start Game' button after the first game had been played was stopping the board from resetting due to the reset functions being called from the event listener on the 'Play Again' button. This was fixed by hiding the start button (jQuery to set display = 'none') after the first game has been played so it could not be pressed.
+* Reference error (type error) was being displayed on the console if a user tried to input a guess into the text box when a game was not active. This was resolved by setting the gameFinish variable to true when declaring it.
 ****
 ## Deployment
 
