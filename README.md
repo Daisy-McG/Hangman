@@ -41,7 +41,7 @@ This Website was created for the sole purpose of completing the second Milestone
 This website was created to showcase my knowledge of HTML, CSS & JavaScript and to provide users with some entertainment in the form of an online Hangman game created with JavaScript and SVG and jQuery. The game should be easy to understand, simple to interactive with and give feedback to the user on all inputs.
 
 Site Goals:
-* To showcase the skills I have learnt in HTML, CSS, JS.
+* To showcase the skills I have learnt in HTML, CSS, JavaScript.
 * To provide users with an interactive game to play that has clear Win / Lose Scenarios.
 * To create an enjoyable, interactive game that makes the user want to stay and play again.
 * To create a game that makes the user want to return to the website.
@@ -68,9 +68,9 @@ Features planned:
 * Restart Game button.
 * Error messages with incorrect guesses.
 * Win / Lose information.
-* Footer Items - Contact Information and link GitHub Profile / Repo.
+* Footer Items - Contact Information and link GitHub Profile / Repository.
 
-**Feature Scale** <br>
+**Feature Importance/Effort** <br>
 ![Features](assets/images/scope.jpg)
 
 ### **The Structure Plane**
@@ -148,7 +148,7 @@ User Story:
  * User Win / Lose scores are displayed on Screen
 
 Description:<br>
-A score section will be added to the page to show the user how many games they have won or lost during their session. This score will only be dislayed for the current session. Once the browser is closed, the score will not be available next time the user goes to the site.
+A score section will be added to the page to show the user how many games they have won or lost during their session. This score will only be displayed for the current session. Once the browser is closed, the score will not be available next time the user goes to the site.
 
 ### **The Skeleton Plane**
 #### Wireframes
@@ -195,8 +195,6 @@ No physical images will be used on the site. A Hangman image will be drawn with 
 	* GithHub is the hosting site used to store the source code for the Website and [Git Pages](https://pages.github.com/) is used for the deployment of the live site.
 * [Git](https://git-scm.com/)
 	* Git is used as version control software to commit and push code to the GitHub repository where the source code is stored.
-* [TinyJPG](https://tinyjpg.com/)
-	* TinyJPG is used to reduce the file sizes of images before being deployed to reduce storage and bandwith.
 * [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
 	* Google chromes built in developer tools are used to inspect page elements and help debug issues with the site layout and test different CSS styles.
 * [balsamiq Wireframes](https://balsamiq.com/wireframes/)
@@ -229,9 +227,9 @@ For the initial commit I clicked on the Source Control menu on the side bar in V
 I selected publish to GitHub public repository and my first commit was published.
 
 The following commands were used for version control throughout the project:
-* git add filename - This command was used to add fils to the staging area before commiting.
+* git add filename - This command was used to add files to the staging area before committing.
 * git commit -m "commit message explaining the updates" - This command was used to to commit changes to the local repository.
-* git push - This command is used to push all commited changes to the GitHub repository.
+* git push - This command is used to push all committed changes to the GitHub repository.
 
 ### Using Github Pages
 1. Navigate to the GitHub [Repository:](https://github.com/Daisy-McG/milestone-project-two)
