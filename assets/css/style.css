@@ -23,6 +23,39 @@ h6 {
     margin-bottom: 1.5rem;
 }
 
+/* Game */
+
+.game-container {
+    padding: 20px 30px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    overflow: hidden;
+    border: 3px solid #9E5656;
+    border-radius: 10px;
+    background-color: rgb(134, 134, 134);
+}
+
+.figure-container {
+    fill: transparent;
+    stroke: #000;
+    stroke-width: 4px;
+    stroke-linecap: round;
+}
+
+.figure-part {
+    display: none;
+}
+
+.start-face {
+    display: none;
+}
+
+.lose-face {
+    display: none;
+}
+
+
 /* Header */
 header {
     background-color: #9E5656;
