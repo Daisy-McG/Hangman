@@ -1,3 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
     font-size: 10px;
+}
+
+body {
+    font-family: "Rokkitt", sans-serif;
+    background: #373638;
+    color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display SC", sans-serif;
+    font-weight: 800;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Header */
+header {
+    background-color: #9E5656;
+    border-bottom: 1px solid;
+}
+
+.page-heading {
+    font-size: 8vw;
+}
+
+.sub-heading {
+    font-size: 2vw;
 }
