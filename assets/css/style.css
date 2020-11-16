@@ -9,6 +9,9 @@ body {
     font-family: "Rokkitt", sans-serif;
     background: #373638;
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1,
@@ -186,4 +189,5 @@ footer div i:hover {
     width: 100%;
     border-top: 1px solid;
     background-color: #9E5656;
+    flex: 1;
 }
