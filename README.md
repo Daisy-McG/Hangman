@@ -311,7 +311,7 @@ Only testing listed under High Level Test Cases will be performed as part of thi
 ### Test Results
 
 ![Results](assets/test-results/test_results.jpg)<br>
-Full test results can be found [here](assets/test-results/ms2_test-results.xlsx)<br>
+Full test results can be found [here](assets/test-results/ms2_test_results.xlsx)<br>
 Please note these results are a .xlsx file and will require excel, google docs or compatiable program to open the file.<br>
 All tests passed.
 
