@@ -316,7 +316,7 @@ All tests passed.
 ### Issues and Resolutions to issues found during testing
 * Email mailto link was broken due to a space between the mailto and email. This was found when running code through jshint.com and was fixed by removing the space.
 * Clicking the 'Start Game' button after the first game had been played was stopping the board from resetting due to the reset functions being called from the event listener on the 'Play Again' button. This was fixed by hiding the start button (jQuery to set display = 'none') after the first game has been played so it could not be pressed.
-* Reference error (type error) was being displayed on the console if a user tried to input a guess into the text box when a game was not active. This was resolved by setting the gameFinish variable to true when declaring it.
+* Reference error (type error) was being displayed on the console if a user tried to input a guess into the text box when a game was not active. This was resolved by setting the gameFinish variable to true when declaring it as the game only validates input while the game is active.
 ****
 ## Deployment
 
