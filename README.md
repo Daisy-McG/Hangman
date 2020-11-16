@@ -1,4 +1,6 @@
 # JavaScript Hangman Game
+
+![mockup](assets/images/mock-up.jpg)
 The live website can be found [here](https://daisy-mcg.github.io/milestone-project-two/)
 
 ## Purpose
@@ -24,15 +26,16 @@ This Website was created for the sole purpose of completing the second Milestone
     * [Future Features](#Features-Left-to-Implement)
 * [Technologies](#Technologies)
 * [Testing](#Testing)
+    * [Test Strategy](#Test-Strategy)
+    * [Test Results](#Test-Results)
+    * [Isses and Resolutions](#Issues-and-Resolutions-to-issues-found-during-testing)
 * [Deployment](#Deployment)
     * [Project Creation](#Project-Creation)
     * [GitHub Pages](#Using-Github-Pages)
     * [Locally](Run-Locally)
 * [Credits](#Credits)
   * [Content](#Content)
-  * [Media](#Media)
   * [Acknowledgements](#Acknowledgements)
-  * [Comments](#Comments)
 
 ****
 
@@ -51,9 +54,12 @@ Site Goals:
 * As a user, I want to view the website and content clearly on any device.
 * As a user, I want to have instructions on how to play the game so that I can easily understand the rules.
 * As a user, I want to be able to start a game when I am ready.
+* As a user, I want to see a hangman image appear as I guess incorrectly.
 * As a user, I want to know whether my guess was successful or not.
 * As a user, I want a way to start a new game when the current game has ended.
 * As a user, I want to see my score so that I know how many games I have won or lost.
+* As a user, I want to see contact information for the site owner incase I want to reach out with any queries I have about the site.
+* As a user, I want to see other work the site owner has created.
 
 ### **The Scope Plane**
 Features planned:
@@ -122,6 +128,15 @@ Description:<br>
 A button will be added to the game board to allow the user to start a game.
 
 User Story:
+> As a user, I want to see a hangman image appear as I guess incorrectly.
+ 
+ Acceptance Criteria:
+ * Hangman image is displayed one piece at a time after each unsuccessfull guess.
+
+Description:<br>
+A Hangman image will be drawn using Scalable Vector Grapics. Each part of the image will be it's own element so it can be displayed a single piece at a time. Once all body parts are displayed, the game will end and the user will lose.
+
+User Story:
 > As a user, I want to know whether my guess was successful or not.
  
  Acceptance Criteria:
@@ -148,7 +163,27 @@ User Story:
  * User Win / Lose scores are displayed on Screen
 
 Description:<br>
-A score section will be added to the page to show the user how many games they have won or lost during their session. This score will only be displayed for the current session. Once the browser is closed, the score will not be available next time the user goes to the site.
+A score section will be added to the page to show the user how many games they have won or lost during their session. This score will only be displayed for the current session. Once the browser is refreshed, the score will reset.
+
+User Story:
+> As a user, I want to see contact information for the site owner incase I want to reach out with any queries I have about the site.
+ 
+ Acceptance Criteria:
+ * Contact Information displayed in footer.
+
+Description:<br>
+Contact information will be added to the footer. This will contain a name and email for the site owner.
+
+User Story:
+> As a user, I want to see other work the site owner has created.
+ 
+ Acceptance Criteria:
+ * GitHub Repositry information is displayed
+ * GitHub Icon displayed that directs to GitHub Repository
+
+Description:<br>
+GitHub Repositpry information will be displayed in the footer. This should contain the site owners GitHub user name and an icon that when clicked will direct to the owners GitHub page.
+
 
 ### **The Skeleton Plane**
 #### Wireframes
@@ -171,12 +206,26 @@ The headers on all pages throughout the Website are using the [Playfair Display 
 No physical images will be used on the site. A Hangman image will be drawn with code by using Scalable Vector Graphics (SVG) to display this on the HTML page.
 
 #### Differences to Design
+
+All features listed in the Structure Plane were implemented as per design.
+
 ****
 ## Features
 
 ### Existing Features
 
+* Heading and Sub-heading.
+* Game Instructions.
+* SVG Hangman image.
+* Win/Lose Scores.
+* User input.
+* Buttons to start and re-start game.
+* Footer - Contact Information and GitHub Repo Information
+
 ### Features Left to Implement
+
+* Game modes: 'Easy' or 'Hard' mode will be added in a future release. Easy mode will start with no figure parts displayed, this will leave 10 guesses. Hard mode will start with the hanging structure already drawn, this will leave 6 guesses.
+
 ****
 ## Technologies
 * [HTML](https://en.wikipedia.org/wiki/HTML)
@@ -185,6 +234,8 @@ No physical images will be used on the site. A Hangman image will be drawn with 
 	* This project uses custom written CSS to style the Website.
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 	* This project uses JavaScript for functionality through the Website, this includes the puzzle game, onclick button functions, use of the Email API and Google Maps APIs.
+* [jQuery](https://jquery.com/)
+    * jQuery was used throughout the hangman.js file to minipulate css and html properties.
 * [Bootstrap](https://getbootstrap.com/)
 	* The Bootstrap framework is used throughout this website for layouts and styling. 
 * [Google Fonts](https://fonts.google.com/)
@@ -207,11 +258,65 @@ No physical images will be used on the site. A Hangman image will be drawn with 
     * tecnisih.com Multi Device Website Mockup Generator was used to create the Mock up image in this README.
 * [placehold.it](https://placehold.it)
     * placehold.it was used to display the colours shown in the Color Scheme section.
+* [Excel](https://www.microsoft.com/en-ie/microsoft-365/excel)
+    * Excel was used to create the bar chart diplaying difficulty / importance information.
 
 ****
 ## Testing
 
-**Bugs found and fixed during testing:**
+### Test Strategy
+#### **Summary**
+
+Testing is required on The Hangman JavaScript game created for Milestone Project 2. All features and user stories documented in the README are to be tested. 
+
+HTML code must pass through the [W3C HTML Validator](https://validator.w3.org/).
+
+CSS code must pass through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
+
+JavaScript code must pass through the [JSHint Validator](https://jshint.com/).
+
+#### **High Level Test Cases**
+![Test Cases](assets/images/test_cases.jpg)
+
+User Stories covered:
+* As a user, I want to view the website and content clearly on any device. - TC001, TC002, TC003
+* As a user, I want to easily understand the main purpose of the site. - TC004
+* As a user, I want to have instructions on how to play the game so that I can easily understand the rules. - TC005
+* As a user, I want to be able to start a game when I am ready. - TC006
+* As a user, I want to know whether my guess was successful or not. - TC007
+* As a user, I want a way to start a new game when the current game has ended. - TC008
+* As a user, I want to see my score so that I know how many games I have won or lost. - TC009
+* As a user, I want to see a hangman image appear as I guess incorrectly. - TC010
+* As a user, I want to see contact information for the site owner incase I want to reach out with any queries I have about the site. - TC012
+* As a user, I want to see other work the site owner has created. - TC013
+
+#### **Access Requirements**
+
+GitHub Respoitory must be set to public for the live website to be displayed.
+
+#### **Regression Testing**
+
+All features previously tested while in development should be retested on the live Website.
+
+#### **Assumptions and Dependencies**
+
+Testing is dependent on website being live on GitHub pages.
+
+#### **Out of Scope**
+
+Only testing listed under High Level Test Cases will be performed as part of this test effort.
+
+### Test Results
+
+![Results](assets/test-results/test_results.jpg)<br>
+Full test results can be found [here](assets/test-results/ms2_test-results.xlsx)<br>
+Please note these results are a .xlsx file and will require excel, google docs or compatiable program to open the file.<br>
+All tests passed.
+
+### Issues and Resolutions to issues found during testing
+* Email mailto link was broken due to a space between the mailto and email. This was found when running code through jshint.com and was fixed by removing the space.
+* Clicking the 'Start Game' button after the first game had been played was stopping the board from resetting due to the reset functions being called from the event listener on the 'Play Again' button. This was fixed by hiding the start button (jQuery to set display = 'none') after the first game has been played so it could not be pressed.
+* Reference error (type error) was being displayed on the console if a user tried to input a guess into the text box when a game was not active. This was resolved by setting the gameFinish variable to true when declaring it.
 ****
 ## Deployment
 
@@ -251,9 +356,9 @@ The following commands were used for version control throughout the project:
 ## Credits
 
 ### Code
-The JavaScript hangman game was created by following a tutorial on [Udemy Course](https://www.udemy.com/course/web-projects-with-vanilla-javascript/).
-### Media
+The JavaScript hangman game was created by following a tutorial on [Udemy](https://www.udemy.com/course/web-projects-with-vanilla-javascript/). This was then heavily modified to fit the game design, including but not limited to: Use of jQuery to change CSS and HTML properties, increase hangman size, add face to hangman, keep a game score, user initiated game play, text input, letter validation (regex and conditional statements), layout change from flex to use bootstrap, use of arrays for words and hints.
 
 ### Acknowledgements
+I would like to thank slack user Charlie for her support and UX Design pointers throughout this project.
 ****
-## Comments
+
