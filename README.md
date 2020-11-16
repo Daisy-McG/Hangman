@@ -58,6 +58,8 @@ Site Goals:
 * As a user, I want to know whether my guess was successful or not.
 * As a user, I want a way to start a new game when the current game has ended.
 * As a user, I want to see my score so that I know how many games I have won or lost.
+* As a user, I want to see contact information for the site owner incase I want to reach out with any queries I have about the site.
+* As a user, I want to see other work the site owner has created.
 
 ### **The Scope Plane**
 Features planned:
@@ -163,6 +165,26 @@ User Story:
 Description:<br>
 A score section will be added to the page to show the user how many games they have won or lost during their session. This score will only be displayed for the current session. Once the browser is refreshed, the score will reset.
 
+User Story:
+> As a user, I want to see contact information for the site owner incase I want to reach out with any queries I have about the site.
+ 
+ Acceptance Criteria:
+ * Contact Information displayed in footer.
+
+Description:<br>
+Contact information will be added to the footer. This will contain a name and email for the site owner.
+
+User Story:
+> As a user, I want to see other work the site owner has created.
+ 
+ Acceptance Criteria:
+ * GitHub Repositry information is displayed
+ * GitHub Icon displayed that directs to GitHub Repository
+
+Description:<br>
+GitHub Repositpry information will be displayed in the footer. This should contain the site owners GitHub user name and an icon that when clicked will direct to the owners GitHub page.
+
+
 ### **The Skeleton Plane**
 #### Wireframes
 Mobile and Desktop view
@@ -184,12 +206,26 @@ The headers on all pages throughout the Website are using the [Playfair Display 
 No physical images will be used on the site. A Hangman image will be drawn with code by using Scalable Vector Graphics (SVG) to display this on the HTML page.
 
 #### Differences to Design
+
+All features listed in the Structure Plane were implemented as per design.
+
 ****
 ## Features
 
 ### Existing Features
 
+* Heading and Sub-heading.
+* Game Instructions.
+* SVG Hangman image.
+* Win/Lose Scores.
+* User input.
+* Buttons to start and re-start game.
+* Footer - Contact Information and GitHub Repo Information
+
 ### Features Left to Implement
+
+* Game modes: 'Easy' or 'Hard' mode will be added in a future release. Easy mode will start with no figure parts displayed, this will leave 10 guesses. Hard mode will start with the hanging structure already drawn, this will leave 6 guesses.
+
 ****
 ## Technologies
 * [HTML](https://en.wikipedia.org/wiki/HTML)
@@ -255,6 +291,8 @@ All features previously tested while in development should be retested on the li
 Testing is dependent on website being live on GitHub pages.
 
 #### **Out of Scope**
+
+Only testing listed under High Level Test Cases will be performed as part of this test effort.
 
 ### Test Results
 
