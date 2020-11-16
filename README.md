@@ -1,4 +1,6 @@
 # JavaScript Hangman Game
+
+![mockup](assets/images/mock-up.jpg)
 The live website can be found [here](https://daisy-mcg.github.io/milestone-project-two/)
 
 ## Purpose
@@ -33,9 +35,7 @@ This Website was created for the sole purpose of completing the second Milestone
     * [Locally](Run-Locally)
 * [Credits](#Credits)
   * [Content](#Content)
-  * [Media](#Media)
   * [Acknowledgements](#Acknowledgements)
-  * [Comments](#Comments)
 
 ****
 
@@ -278,6 +278,18 @@ JavaScript code must pass through the [JSHint Validator](https://jshint.com/).
 #### **High Level Test Cases**
 ![Test Cases](assets/images/test_cases.jpg)
 
+User Stories covered:
+* As a user, I want to view the website and content clearly on any device. - TC001, TC002, TC003
+* As a user, I want to easily understand the main purpose of the site. - TC004
+* As a user, I want to have instructions on how to play the game so that I can easily understand the rules. - TC005
+* As a user, I want to be able to start a game when I am ready. - TC006
+* As a user, I want to know whether my guess was successful or not. - TC007
+* As a user, I want a way to start a new game when the current game has ended. - TC008
+* As a user, I want to see my score so that I know how many games I have won or lost. - TC009
+* As a user, I want to see a hangman image appear as I guess incorrectly. - TC010
+* As a user, I want to see contact information for the site owner incase I want to reach out with any queries I have about the site. - TC012
+* As a user, I want to see other work the site owner has created. - TC013
+
 #### **Access Requirements**
 
 GitHub Respoitory must be set to public for the live website to be displayed.
@@ -295,6 +307,11 @@ Testing is dependent on website being live on GitHub pages.
 Only testing listed under High Level Test Cases will be performed as part of this test effort.
 
 ### Test Results
+
+![Results](assets/test-results/test_results.jpg)<br>
+Full test results can be found [here](assets/test-results/ms2_test-results.xlsx)<br>
+Please note these results are a .xlsx file and will require excel, google docs or compatiable program to open the file.<br>
+All tests passed.
 
 ### Issues and Resolutions to issues found during testing
 * Email mailto link was broken due to a space between the mailto and email. This was found when running code through jshint.com and was fixed by removing the space.
@@ -339,9 +356,9 @@ The following commands were used for version control throughout the project:
 ## Credits
 
 ### Code
-The JavaScript hangman game was created by following a tutorial on [Udemy Course](https://www.udemy.com/course/web-projects-with-vanilla-javascript/).
-### Media
+The JavaScript hangman game was created by following a tutorial on [Udemy](https://www.udemy.com/course/web-projects-with-vanilla-javascript/). This was then heavily modified to fit the game design, including but not limited to: Use of jQuery to change CSS and HTML properties, increase hangman size, add face to hangman, keep a game score, user initiated game play, text input, letter validation (regex and conditional statements), layout change from flex to use bootstrap, use of arrays for words and hints.
 
 ### Acknowledgements
+I would like to thank slack user Charlie for her support and UX Design pointers throughout this project.
 ****
-## Comments
+
