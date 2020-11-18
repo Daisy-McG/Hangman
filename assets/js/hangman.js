@@ -159,7 +159,7 @@ function showNotification() {
 
 /* Function to get form input and call validateLetter() if value is not undefined */
 function validateForm() {
-    const input = document.forms["userInput"]["guess"].value;
+    const input = document.forms.userInput.guess.value;
     if (input != undefined) {
         validateLetter(input);
     }
