@@ -208,6 +208,7 @@ No physical images will be used on the site. A Hangman image will be drawn with 
 #### Differences to Design
 
 All features listed in the Structure Plane were implemented as per design.
+A custom 404 page was added to the Website that contains an anchor link to allow the user to direct back to the home page if they try to access a page that is not available.
 
 ****
 ## Features
@@ -314,6 +315,7 @@ Only testing listed under High Level Test Cases will be performed as part of thi
 Full test results can be found [here](assets/test-results/ms2_test_results.xlsx)<br>
 Please note these results are a .xlsx file and will require excel, google docs or compatiable program to open the file.<br>
 All tests passed.
+Testing of custom 404 page was performed to ensure you could navigate back to the home page without needing to use the browser buttons.
 
 ### Issues and Resolutions to issues found during testing
 * Email mailto link was broken due to a space between the mailto and email. This was found when running code through jshint.com and was fixed by removing the space.
