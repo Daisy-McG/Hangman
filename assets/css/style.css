@@ -191,3 +191,9 @@ footer div i:hover {
     background-color: #9E5656;
     flex: 1;
 }
+
+/* 404 */
+.home a {
+    font-size: 5rem;
+    text-decoration: none;
+}
