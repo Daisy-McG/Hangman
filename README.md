@@ -1,7 +1,7 @@
 # JavaScript Hangman Game
 
 ![mockup](assets/images/mock-up.jpg)
-The live website can be found [here](https://daisy-mcg.github.io/milestone-project-two/)
+The live website can be found [here](https://daisy-mcg.github.io/Hangman/)
 
 ## Purpose
 
