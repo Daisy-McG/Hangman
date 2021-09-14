@@ -120,12 +120,20 @@ p {
     font-size: 2rem;
 }
 
+#play-button:hover {
+    background-color: #a1d3ff;
+}
+
 #start-btn {
     background-color: #ffffff;
     border-radius: 5px;
     margin-left: 5px;
     font-weight: bolder;
     font-size: 2rem;
+}
+
+#start-btn:hover {
+    background-color: #a1d3ff;
 }
 
 #userInput {
