@@ -114,7 +114,7 @@
 
                 <!-- Calls validateForm() method to send user input to variable -->
                 <form name="userInput" id="userInput" onsubmit="return false">
-                    <input type="text" maxlength="1" name="guess" id="guess" placeholder="Enter guess here" />
+                    <input type="text" maxlength="1" name="guess" id="guess" placeholder="Enter guess here" aria-label="Enter guess here"/>
                     <button onclick="validateForm()" id="submit-btn">Submit</button>
                 </form>
 
@@ -130,7 +130,7 @@
             <div class="final-msg-container" id="final-msg-container">
                 <div class="row no-gutters">
                     <div class="col-12 d-flex justify-content-center">
-                        <p id="final-message"></p>
+                        <h4 id="final-message"></h4>
                     </div>
                     <div class="col-12 d-flex justify-content-center">
                         <button id="play-button" onclick="startGame()">
