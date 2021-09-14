@@ -32,6 +32,20 @@
     </header>
 
     <main>
+        <div class="row no-gutters">
+            <!-- Hangman game instructions -->
+            <div class="col-12 justify-content-center text-center">
+                <h2>How To Play</h2>
+                <p>Guess the hidden word by inputting letters to text box.<br>
+                    If you enter a correct letter, it will be displayed on the game board.<br>
+                    Incorrect letter guesses will be shown under 'Wrong Letters' on the game board.<br>
+                    If you guess an incorrect letter 10 times, you will lose the game.<br>
+                    If you lose the game, the correct word will be revealed.<br>
+                    Only letters in the English alphabet will accepted.<br>
+                    You may only enter a letter once and they are case insensitive.<br>
+                </p>
+            </div>
+        </div>
         <div class="container game-container">
             <div class="row no-gutters">
                 <!-- Game scores -->
@@ -43,47 +57,10 @@
                 </div>
             </div>
             <div class="row no-gutters">
-                <div class="col-sm-12 col-md-4">
-                    <!-- Hangman game instructions -->
-                    <h2>How To Play</h2>
-                    <p>Guess the hidden word by inputting letters to text box.<br>
-                        If you enter a correct letter, it will be displayed on the game board.<br>
-                        Incorrect letter guesses will be shown under 'Wrong Letters' on the game board.<br>
-                        If you guess an incorrect letter 10 times, you will lose the game.<br>
-                        If you lose the game, the correct word will be revealed.<br>
-                        Only letters in the English alphabet will accepted.<br>
-                        You may only enter a letter once and they are case insensitive.<br>
-                    </p>
-                    <div class="text-center">
-                        <button id="start-btn" onclick="startGame()">Start Game</button>
-                    </div>
 
-                </div>
-                <!-- Word and text input for guesses -->
-                <div class="col-sm-12 col-md-4 text-center">
-                    <div class="word" id="word">
-                    </div>
-
-                    <!-- Hint -->
-                    <div id="hint">
-                    </div>
-
-                    <!-- Calls validateForm() method to send user input to variable -->
-                    <form name="userInput" id="userInput" onsubmit="return false">
-                        <input type="text" maxlength="1" name="guess" id="guess" placeholder="Enter guess here" />
-                        <button onclick="validateForm()" id="submit-btn">Submit</button>
-                    </form>
-
-                    <!-- Error message when using duplicate letters -->
-                    <p id="letter-error">You have already entered this letter!</p>
-
-                    <!-- Display incorrect letter guesses -->
-                    <div id="wrong-letters" class="text-center">
-                    </div>
-                </div>
                 <!-- Start Hangman game -->
-                <div class="col-sm-12 col-md-4 text-center">
-                    <svg height="450" width="200" class="figure-container">
+                <div class="col-sm-12 col-md-6 text-center">
+                    <svg height="345" width="200" class="figure-container">
                         <!-- Rod -->
                         <line x1="20" y1="330" x2="230" y2="330" class="figure-part" />
                         <line x1="60" y1="20" x2="60" y2="330" class="figure-part" />
@@ -122,12 +99,40 @@
                         <span class="sr-only">SVG Board with hangman image</span>
                     </svg>
                 </div>
+
+                <div class="col-sm-12 col-md-6 text-center">
+                <div class="text-center justify-content-center align-items-center">
+                    <button id="start-btn" onclick="startGame()">Start Game</button>
+                </div>
+                <!-- Word and text input for guesses -->
+                <div class="word" id="word">
+                </div>
+
+                <!-- Hint -->
+                <div id="hint">
+                </div>
+
+                <!-- Calls validateForm() method to send user input to variable -->
+                <form name="userInput" id="userInput" onsubmit="return false">
+                    <input type="text" maxlength="1" name="guess" id="guess" placeholder="Enter guess here" />
+                    <button onclick="validateForm()" id="submit-btn">Submit</button>
+                </form>
+
+                <!-- Error message when using duplicate letters -->
+                <p id="letter-error">You have already entered this letter!</p>
+
+                <!-- Display incorrect letter guesses -->
+                <div id="wrong-letters">
+                </div>
             </div>
+        </div>
             <!-- Container for final messages -->
             <div class="final-msg-container" id="final-msg-container">
                 <div class="row no-gutters">
                     <div class="col-12 d-flex justify-content-center">
-                        <p id="final-message"></p>
+                        <p id="final-message text-center"></p>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center">
                         <button id="play-button" onclick="startGame()">
                             Play Again
                         </button>
@@ -141,15 +146,8 @@
     <footer id="footer">
         <div class="container">
             <div class="row no-gutters">
-                <!-- Contact Information -->
-                <div class="col-sm-12 col-md-6 text-center">
-                    <p>
-                        Contact: Daisy McGirr<br>
-                        Email: <a href="mailto:daisy.ej.mcg@gmail.com">daisy.ej.mcg@gmail.com</a><br>
-                    </p>
-                </div>
                 <!-- GitHub Repo Information -->
-                <div class="col-sm-12 col-md-6 text-center">
+                <div class="col-sm-12 text-center">
                     <p>GitHub Repository - User: Daisy-McG </p>
                     <a target="_blank" href="https://github.com/Daisy-McG">
                         <i class="fab fa-github"></i>

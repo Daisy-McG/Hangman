@@ -85,6 +85,7 @@ function displayWord() {
 
         // Display final win status
         $('#final-message').html("Congratulations! You Won!!!");
+        $('#final-message').css("color", "#62c962");
         $('#final-msg-container').css("display", "block");
 
         win = win + 1;
@@ -130,6 +131,7 @@ function updateWrongLettersEl() {
 
         // Display final win status
         $('#final-message').html("Sorry, you Lose!!!");
+        $('#final-message').css("color", "#ff3333");
         $('#final-msg-container').css("display", "block");
 
         //After they lose, display the selectedWord

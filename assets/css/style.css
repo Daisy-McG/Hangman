@@ -7,7 +7,7 @@
 
 body {
     font-family: "Rokkitt", sans-serif;
-    background: #373638;
+    background: #141313;
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -38,14 +38,14 @@ p {
     margin-bottom: 1rem;
     width: 100%;
     overflow: hidden;
-    border: 3px solid #9E5656;
+    border: 3px solid #ffffff;
     border-radius: 10px;
-    background-color: rgb(134, 134, 134);
+    background-color: #141313;
 }
 
 .figure-container {
     fill: transparent;
-    stroke: #000;
+    stroke: rgb(255, 255, 255);
     stroke-width: 4px;
     stroke-linecap: round;
 }
@@ -81,14 +81,14 @@ p {
 }
 
 .letter {
-    border-bottom: 3px solid #000000;
+    border-bottom: 3px solid #fffdfd;
     font-size: 4rem;
     align-items: center;
     justify-content: center;
     margin: 0 3px;
     height: 50px;
     width: 30px;
-    color: #9E5656;
+    color: #ffffff;
 }
 
 .final-msg-container {
@@ -102,7 +102,7 @@ p {
 
 #letter-error {
     display: none;
-    color: #d80404;
+    color: #ff3333;
     font-weight: bolder;
     padding: 5px;
 }
@@ -145,18 +145,28 @@ p {
     font-size: 2rem;
 }
 
+#score .lose {
+    color: #ff3333;
+}
+
+#score .win {
+    color: #62c962;
+}
+
+
 /* Header */
 header {
-    background-color: #9E5656;
+    background-color: #141313;
     border-bottom: 1px solid;
 }
 
 .page-heading {
-    font-size: 8vw;
+    font-size: 3rem;
+    color: #a1d3ff;
 }
 
 .sub-heading {
-    font-size: 2vw;
+    font-size: 2rem;
 }
 
 /* Footer */
@@ -180,7 +190,7 @@ footer div i {
 }
 
 footer div i:hover {
-    color: rgb(0, 0, 0);
+    color: #a1d3ff;
 }
 
 #footer {
@@ -188,7 +198,7 @@ footer div i:hover {
     bottom: 0;
     width: 100%;
     border-top: 1px solid;
-    background-color: #9E5656;
+    background-color: #141313;
     flex: 1;
 }
 
@@ -196,4 +206,16 @@ footer div i:hover {
 .home a {
     font-size: 5rem;
     text-decoration: none;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 600px) { 
+    .page-heading {
+        font-size: 5rem;
+    }
+    
+    .sub-heading {
+        font-size: 3rem;
+    }
 }
