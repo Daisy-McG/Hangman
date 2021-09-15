@@ -93,6 +93,7 @@ p {
 
 .final-msg-container {
     display: none;
+    text-align: center;
 }
 
 #final-message {
