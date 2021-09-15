@@ -99,7 +99,7 @@ function updateWrongLettersEl() {
 
     // Display wrong letters into html
     wrongLettersEl.innerHTML = `
-        ${wrongLetters.length > 0 ? '<p>Wrong Letters</p>' : ''}
+        ${wrongLetters.length > 0 ? '<h3>Wrong Letters</h3>' : ''}
         ${wrongLetters.map(letter => `<span>${letter}</span>`)}
     `;
     /* Loops through figureParts array for each element with an id of figure-part and displays one 'body part'
